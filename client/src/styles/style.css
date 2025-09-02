@@ -17,16 +17,12 @@
     --dark-blue-purple: hsl(248 70% 40%);
     --very-light-green: hsl(127 70% 95%);
 
-    --font-family:
-        "Oswald",
-        "Bangers",
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        sans-serif;
-    
+    --font-family: "Oswald";
+
+    --heading-font-family: "Bangers", "Oswald", sans-serif;
+
     --extra-light: 200;
-    --light:300;
+    --light: 300;
     --regular: 400;
     --semi-bold: 600;
 
@@ -40,54 +36,65 @@
 
 }
 
+* {
+  font-family: var(--font-family), Arial, sans-serif !important;
+}
+
 body {
-    font-family: "Oswald";
+    font-family: var(--font-family), Arial, sans-serif !important;
     background-image: linear-gradient(135deg,
-    var(--light-blue),
-    var(--light-pink),
-    var(--light-purple),
-    var(--light-green),
-        var(--white));
+            var(--light-blue),
+            var(--light-pink),
+            var(--light-purple),
+            var(--light-green),
+            var(--white));
     animation: gradient 40s ease infinite;
     background-size: 1300% 1300%;
-  }
-  @keyframes gradient {
-    0% { 
+}
+
+@keyframes gradient {
+    0% {
         background-position: 0% 50%;
     }
+
     25% {
         background-position: 50% 75%;
     }
-    50% { 
+
+    50% {
         background-position: 100% 50%;
     }
+
     75% {
         background-position: 50% 75%;
     }
-    100% { 
+
+    100% {
         background-position: 0% 50%;
     }
-  }
+}
+
 
 h1 {
     color: var(--white);
     text-shadow: 0.05em 0.1em 0.05em var(--very-dark-gray);
     font-size: var(--h1-font-size) !important;
-    font-family: var(--font-family);
+    font-family: var(--heading-font-family) !important;
     text-align: center;
     margin: 1em 0 1em 0 !important;
-    
-  }
+
+}
 
 h2 {
     color: var(--white);
     text-shadow: 0.02em 0.01em 0.05em hsl(0 0% 9%);
-    text-align:center;
+    text-align: center;
     margin-top: 0.5em !important;
     margin-bottom: 1em !important;
+    font-family: var(--heading-font-family) !important;
     font-size: var(--h2-font-size) !important;
-    
-  }
+
+}
 
 .navigation-bar {
     position: fixed;
@@ -166,7 +173,7 @@ h2 {
     font-size: 1.5em;
 }
 
-  .general-container {
+.general-container {
     margin-top: 4em;
     /* margin: auto; */
     padding: 5em;
@@ -189,63 +196,66 @@ h2 {
 }
 
 .project-card {
-        width: 300px;
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        background-color: var(--white);
-        transition: transform 0.3s ease;
-        padding: 1em;
-        margin-bottom: 20px;
-        
-    }
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--white);
+    transition: transform 0.3s ease;
+    padding: 1em;
+    margin-bottom: 20px;
+
+}
 
 .project-card img {
-        height: 300px; /* Fixed height for all images */
-        width: 100%;   /* Full width of the card */
-        object-fit: cover; /* Ensures the image scales proportionally */
-        border-radius: 8px;
-    }
+    height: 300px;
+    /* Fixed height for all images */
+    width: 100%;
+    /* Full width of the card */
+    object-fit: cover;
+    /* Ensures the image scales proportionally */
+    border-radius: 8px;
+}
 
-    .project-card:hover {
-        transform: scale(1.05);
-    }
+.project-card:hover {
+    transform: scale(1.05);
+}
 
 .project-box {
-        display: flex;
-        justify-content: center;
-        padding: 1em;
-    }
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
 
 .project-icon {
-        color: var(--dark-purple);
-        font-size: 2em;
-    }
+    color: var(--dark-purple);
+    font-size: 2em;
+}
 
 .project-title {
-        color: var(--very-dark-gray);
-        font-size: 2em !important;
-        font-weight: var(--semi-bold);
-        margin-top: 0.5em !important;
-        margin-bottom: 0.5em !important;
-    }
+    color: var(--very-dark-gray);
+    font-size: 2em !important;
+    font-weight: var(--semi-bold);
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
 
 .project-description {
-        color: var(--medium-gray);
-        font-size: var(--body-font-size) !important;
-        margin-top: 1em !important;
-        margin-bottom: 1em !important;
-    }
+    color: var(--medium-gray);
+    font-size: var(--body-font-size) !important;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
 
 .skill-grid {
     display: flex;
     justify-content: center;
-    
+
     /* margin: 2em; */
 }
 
@@ -277,10 +287,24 @@ h2 {
     margin-bottom: 2em;
 }
 
-.contact-form-button {
+.Mui-focused {
+      color: var(--very-dark-gray);
+}
+
+.Mui-focused:after {
+    color: var(--dark-blue-purple);
+}
+
+.MuiFilledInput-root:after {
+  border-bottom: 2px solid hsl(248, 70%, 40%) !important;
+}
+
+.contact-form-container .MuiInputLabel-root.Mui-focused {
+  color: hsl(248, 70%, 40%) !important;
+}
+
+.contact-form-button{
     background-color: var(--medium-purple);
-    color: var(--white);
-    margin-top: 1.5em;
 }
 
 .contact-form-button:hover {
@@ -305,11 +329,6 @@ h2 {
 
     .profile-image-card {
         display: none;
-        /* width: 350px;
-        height: 350px;
-        border-radius: 50%;
-        margin-left: -10px;
-        margin-right: 10px; */
     }
 
     .project-card {
@@ -367,10 +386,12 @@ h2 {
         margin-right: 2em;
         flex-grow: 1;
     }
+
     .small-navigation-menu-box {
         display: flex;
         flex-grow: 1;
     }
+
     .small-navigation-bar-menu {
         display: block;
     }
@@ -380,10 +401,6 @@ h2 {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) {}
 
-}
-
-@media (min-width: 1280px) {
-
-}
+@media (min-width: 1280px) {}

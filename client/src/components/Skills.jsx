@@ -20,7 +20,7 @@ import viteIcon from "../assets/images/Vite.js.png";
 import githubIcon from "../assets/images/github-logo.png";
 import typescriptIcon from "../assets/images/typescript.png";
 import muiIcon from "../assets/images/mui.png";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 
 

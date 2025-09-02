@@ -1,7 +1,7 @@
 // import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import ProjectCard from "./common/ProjectCard/ProjectCard";
 
 function Projects() {
@@ -61,7 +61,7 @@ function Projects() {
       <Typography variant="h2">Projects</Typography>
       <Grid container className="project-grid" spacing={3}>
         {projects.map((project, index) => (
-          <Grid item key={index}>
+          <Grid key={index}>
             <ProjectCard project={project} />
           </Grid>
         ))}

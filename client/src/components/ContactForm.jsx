@@ -35,7 +35,7 @@ function ContactForm() {
       console.log(data);
 
       if (data.status === "success") {
-        alert (
+        alert(
           "I have received your message. I will reach out to you as soon as possible."
         );
         setFullName("");
