@@ -41,7 +41,7 @@ function Profile() {
                 <GitHubIcon className="profile-icon" />
               </IconButton>
             </Link>
-            <Link target="_blank" href="https://www.linkedin.com/in/riikka-kallio-270b531b1/">
+            <Link target="_blank" href="https://www.linkedin.com/in/riikka-kallio-494817362/">
               <IconButton aria-label="linkedin account of riikka kallio">
                 <LinkedInIcon className="profile-icon" />
               </IconButton>
