@@ -8,7 +8,7 @@ export default function About() {
         About Me
       </Typography>
       <Typography className="about-description">
-        My name is Riikka and &nbsp;I&apos;m&nbsp; a Junior Software developer. &nbsp;I&apos;m&nbsp; proficient in CSS, HTML, JavaScript, React, TypeScript, Node.js, My-SQL.
+        Hello! &#128075; My name is Riikka and &nbsp;I&apos;m&nbsp; a Junior Software developer. &nbsp;I&apos;m&nbsp; passionate about accessibility and building user-friendly and responsive applications. &nbsp;I&apos;m&nbsp; proficient in CSS, HTML, JavaScript and React.
         &nbsp;I&apos;m&nbsp; currently working as a Technical Support and looking to change careers in becoming a Web Developer/Software Developer.
       </Typography>
     </Container>

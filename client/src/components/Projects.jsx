@@ -24,7 +24,7 @@ function Projects() {
     },
     {
       title: "Snake Game",
-      description: "Snake Game I built with Javascript, HTML and CSS.",
+      description: "Snake Game I built in collaboration using JavaScript, HTML and CSS.",
       image: "/public/snakegame.jpeg",
       alt: "snake game image",
       githubLink: "https://github.com/riikka-kallio/snake-game-v1",
@@ -32,7 +32,7 @@ function Projects() {
     },
     {
       title: "Weather and Local News API",
-      description: "Openweathermap API and Gnews API",
+      description: "In this project I built a weather and local news app using two APIs.",
       image: "/public/weatherapi.jpeg",
       alt: "weather and news app image",
       githubLink: "https://github.com/riikka-kallio/weather-api-app",
@@ -40,7 +40,7 @@ function Projects() {
     },
     {
       title: "Christmas Game (Hackathon Challenge)",
-      description: "Christmas Game we built with React. This was a fun Hackathon challenge!",
+      description: "This was a Hackathon challenge where we built a Christmas Game using React.",
       image: "/public/christmasgame.jpeg",
       alt: "christmas game image",
       githubLink: "https://github.com/riikka-kallio/christmas-game-hackathon-2024",
@@ -48,7 +48,7 @@ function Projects() {
     },
     {
       title: "Serverless Book App",
-      description: "This app uses serverless functions made with Next.js",
+      description: "This app uses serverless functions made with React and Next.js",
       image: "/public/booksapp.jpeg",
       alt: "project image",
       githubLink: "https://github.com/riikka-kallio/c18-next-books",
