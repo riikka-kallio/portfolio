@@ -43,8 +43,8 @@ function Projects() {
       description: "Christmas Game we built with React. This was a fun Hackathon challenge!",
       image: "/public/christmasgame.jpeg",
       alt: "christmas game image",
-      githubLink: "https://github.com/riikka-kallio",
-      liveLink: "https://github.com/riikka-kallio",
+      githubLink: "https://github.com/riikka-kallio/christmas-game-hackathon-2024",
+      liveLink: "https://christmas-game-hackathon-2024.netlify.app/",
     },
     {
       title: "Serverless Book App",
