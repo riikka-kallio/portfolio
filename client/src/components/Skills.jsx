@@ -1,7 +1,5 @@
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
 import cssIcon from "../assets/images/css3_icon.png";
 import htmlIcon from "../assets/images/html5_icon.png";
 import sassIcon from "../assets/images/sass_icon.png";
@@ -21,6 +19,7 @@ import githubIcon from "../assets/images/github-logo.png";
 import typescriptIcon from "../assets/images/typescript.png";
 import muiIcon from "../assets/images/mui.png";
 import Grid from "@mui/material/Grid2";
+import SkillAvatar from "./common/SkillAvatar/SkillAvatar";
 
 
 
@@ -33,93 +32,33 @@ function Skills() {
                                 SKILLS
                         </Typography>
                         <Grid container className="skill-grid">
-
-                                <Tooltip title="CSS" arrow>
-                                        <Avatar alt="css icon" src={cssIcon}
-                                                className="avatar-icon" />
-                                </Tooltip>
-                                <Tooltip title="HTML" arrow>
-                                        <Avatar alt="html icon" src={htmlIcon}
-                                                className="avatar-icon" />
-                                </Tooltip>
-                                <Tooltip title="Sass" arrow>
-                                        <Avatar alt="sass icon" src={sassIcon}
-                                                className="avatar-icon" />
-                                </Tooltip>
-                                <Tooltip title="Bootstrap" arrow>
-                                        <Avatar alt="bootsrap icon" src={bootstrapIcon}
-                                                className="avatar-icon" />
-                                </Tooltip>
-
-                                <Tooltip title="Docker" arrow>
-                                <Avatar alt="docker icon" src={dockerIcon}
-                                        className="avatar-icon" />
-                                </Tooltip>
-
+                                <SkillAvatar title="CSS" alt="css icon" src={cssIcon} />
+                                <SkillAvatar title="HTML" alt="html icon" src={htmlIcon} />
+                                <SkillAvatar title="Sass" alt="sass icon" src={sassIcon} />
+                                <SkillAvatar title="Bootstrap" alt="bootstrap icon" src={bootstrapIcon} />
+                                <SkillAvatar title="Docker" alt="docker icon" src={dockerIcon} />
                         </Grid>
 
                         <Grid container className="skill-grid">
-                        <Tooltip title="Express" arrow>
-                                <Avatar alt="express icon" src={expressIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="Figma" arrow>
-                                <Avatar alt="figma icon" src={figmaIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-
-                        <Tooltip title="JavaScript" arrow>
-                                <Avatar alt="javascript icon" src={javascriptIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="MongoDB" arrow>
-                                <Avatar alt="mongodb icon" src={mongodbIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
+                                <SkillAvatar title="Express" alt="express icon" src={expressIcon} />
+                                <SkillAvatar title="Figma" alt="figma icon" src={figmaIcon} />
+                                <SkillAvatar title="JavaScript" alt="javascript icon" src={javascriptIcon} />
+                                <SkillAvatar title="MongoDB" alt="mongodb icon" src={mongodbIcon} />
                         </Grid>
 
-
                         <Grid container className="skill-grid">
-                        <Tooltip title="Next JS" arrow>
-                                <Avatar alt="next js icon" src={nextjsIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="Node JS" arrow>
-                                <Avatar alt="node js icon" src={nodejsIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="PostgreSQL" arrow>
-                                <Avatar alt="postgresql icon" src={postgresqlIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="React" arrow>
-                                <Avatar alt="react icon" src={reactIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="Tailwind" arrow>
-                                <Avatar alt="tailwind icon" src={tailwindIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
+                                <SkillAvatar title="Next JS" alt="next js icon" src={nextjsIcon} />
+                                <SkillAvatar title="Node JS" alt="node js icon" src={nodejsIcon} />
+                                <SkillAvatar title="PostgreSQL" alt="postgresql icon" src={postgresqlIcon} />
+                                <SkillAvatar title="React" alt="react icon" src={reactIcon} />
+                                <SkillAvatar title="Tailwind" alt="tailwind icon" src={tailwindIcon} />
                         </Grid>
 
-
                         <Grid container className="skill-grid">
-                        <Tooltip title="Vite" arrow>
-                                <Avatar alt="vite icon" src={viteIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="GitHub" arrow>
-                                <Avatar alt="github icon" src={githubIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="TypeScript" arrow>
-                                <Avatar alt="typescript icon" src={typescriptIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
-                        <Tooltip title="Material UI" arrow>
-                                <Avatar alt="material ui icon" src={muiIcon}
-                                        className="avatar-icon" />
-                        </Tooltip>
+                                <SkillAvatar title="Vite" alt="vite icon" src={viteIcon} />
+                                <SkillAvatar title="GitHub" alt="github icon" src={githubIcon} />
+                                <SkillAvatar title="TypeScript" alt="typescript icon" src={typescriptIcon} />
+                                <SkillAvatar title="Material UI" alt="material ui icon" src={muiIcon} />
                         </Grid>
 
                 </Container>
