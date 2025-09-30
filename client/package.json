@@ -1,7 +1,7 @@
 {
   "name": "portfolio-riikka",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "proxy": "http://localhost:4001/",
   "type": "module",
   "scripts": {
