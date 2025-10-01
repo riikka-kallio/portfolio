@@ -23,37 +23,37 @@ function Profile() {
 
 
     <Container id="Profile" className="profile-container">
-          <Typography variant="h1">
-            Junior Software Developer
-          </Typography>
-          <Card className="profile-image-card">
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                image="/public/profile.jpeg"
-                alt="Riikka Profile Image"
-              />
-            </CardActionArea>
-          </Card>
-          <Box className="profile-box">
-            <Link target="_blank" href="https://github.com/riikka-kallio">
-              <IconButton aria-label="github account of riikka kallio">
-                <GitHubIcon className="profile-icon" />
-              </IconButton>
-            </Link>
-            <Link target="_blank" href="https://www.linkedin.com/in/riikka-kallio-494817362/">
-              <IconButton aria-label="linkedin account of riikka kallio">
-                <LinkedInIcon className="profile-icon" />
-              </IconButton>
-            </Link>
-            <Link target="_blank" href="https://www.instagram.com/riikkaemiliakal/">
-              <IconButton aria-label="instagram account of riikka kallio">
-                <InstagramIcon className="profile-icon" />
-              </IconButton>
-            </Link>
-          </Box>
-      </Container>
-      
+      <Typography variant="h1">
+        Junior Software Developer
+      </Typography>
+      <Card className="profile-image-card">
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            image="../assets/images/profile.jpeg"
+            alt="Riikka Profile Image"
+          />
+        </CardActionArea>
+      </Card>
+      <Box className="profile-box">
+        <Link target="_blank" href="https://github.com/riikka-kallio">
+          <IconButton aria-label="github account of riikka kallio">
+            <GitHubIcon className="profile-icon" />
+          </IconButton>
+        </Link>
+        <Link target="_blank" href="https://www.linkedin.com/in/riikka-kallio-494817362/">
+          <IconButton aria-label="linkedin account of riikka kallio">
+            <LinkedInIcon className="profile-icon" />
+          </IconButton>
+        </Link>
+        <Link target="_blank" href="https://www.instagram.com/riikkaemiliakal/">
+          <IconButton aria-label="instagram account of riikka kallio">
+            <InstagramIcon className="profile-icon" />
+          </IconButton>
+        </Link>
+      </Box>
+    </Container>
+
   );
 }
 
