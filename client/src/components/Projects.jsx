@@ -3,13 +3,19 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import ProjectCard from "./common/ProjectCard/ProjectCard";
+import solarsystemImg from '../assets/images/solarsystem.jpeg';
+import fourcardfeatureImg from '../assets/images/fourcardfeature.jpeg';
+import snakegameImg from '../assets/images/snakegame.jpeg';
+import weatherapiImg from '../assets/images/weatherapi.jpeg';
+import christmasgameImg from '../assets/images/christmasgame.jpeg';
+import booksappImg from '../assets/images/booksapp.jpeg';
 
 function Projects() {
   const projects = [
     {
       title: "Creative Challenge",
       description: "In this challenge I built Solar System by using HTML and CSS",
-      image: "../assets/images/solarsystem.jpeg",
+      image: solarsystemImg,
       alt: "solarsystem image",
       githubLink: "https://github.com/riikka-kallio/svg-project-solar-system",
       liveLink: "https://6682b9551ce4f920aa2ac5a3--ornate-muffin-e6db46.netlify.app/",
@@ -17,7 +23,7 @@ function Projects() {
     {
       title: "Four Card Feature",
       description: "In this project I built a four card feature from Figma design by using HTML and CSS",
-      image: "../assets/images/fourcardfeature.jpeg",
+      image: fourcardfeatureImg,
       alt: "four cards image",
       githubLink: "https://github.com/riikka-kallio/four-card-image-riikka",
       liveLink: "https://fastidious-pie-e53f68.netlify.app/",
@@ -25,7 +31,7 @@ function Projects() {
     {
       title: "Snake Game",
       description: "Snake Game I built in collaboration using JavaScript, HTML and CSS.",
-      image: "../assets/images/snakegame.jpeg",
+      image:snakegameImg,
       alt: "snake game image",
       githubLink: "https://github.com/riikka-kallio/snake-game-v1",
       liveLink: "https://66eb17e57e08fb739564971f--endearing-marigold-8879a0.netlify.app/",
@@ -33,7 +39,7 @@ function Projects() {
     {
       title: "Weather and Local News API",
       description: "In this project I built a weather and local news app using two APIs.",
-      image: "../assets/images/weatherapi.jpeg",
+      image: weatherapiImg,
       alt: "weather and news app image",
       githubLink: "https://github.com/riikka-kallio/weather-api-app",
       liveLink: "https://vocal-cupcake-d2f9e9.netlify.app/",
@@ -41,7 +47,7 @@ function Projects() {
     {
       title: "Christmas Game (Hackathon Challenge)",
       description: "This was a Hackathon challenge where we built a Christmas Game using React.",
-      image: "../assets/images/christmasgame.jpeg",
+      image: christmasgameImg,
       alt: "christmas game image",
       githubLink: "https://github.com/riikka-kallio/christmas-game-hackathon-2024",
       liveLink: "https://christmas-game-hackathon-2024.netlify.app/",
@@ -49,8 +55,8 @@ function Projects() {
     {
       title: "Serverless Book App",
       description: "This app uses serverless functions made with React and Next.js",
-      image: "../assets/images/booksapp.jpeg",
-      alt: "project image",
+      image: booksappImg,
+      alt: "book app image",
       githubLink: "https://github.com/riikka-kallio/c18-next-books",
       liveLink: "https://c18-next-books.vercel.app/",
     },
