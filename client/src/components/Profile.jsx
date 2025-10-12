@@ -9,6 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import profile from "../assets/images/profile.jpeg";
 
 
 
@@ -28,7 +29,7 @@ function Profile() {
         <CardActionArea>
           <CardMedia
             component="img"
-            image="/images/profile.jpeg"
+            image={profile}
             alt="Riikka Profile Image"
           />
         </CardActionArea>
