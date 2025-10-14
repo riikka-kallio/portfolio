@@ -46,8 +46,13 @@ function sendEmail(fromEmail, toEmail, name, emailAddress, message) {
 app.use(cors({
     origin: ['http://localhost:5173', 'https://riikka.io'],
     methods: ['GET', 'POST', 'OPTIONS'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Handle OPTIONS preflight requests
+app.options('*', cors());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -58,16 +63,17 @@ app.get("/", (req, res) => {
 app.post("/contact_form", async (req, res) => {
     try {
 
-    await emailSchema.validate(req.body);
-    sendEmail(process.env.SERVEREMAIL, 
-        process.env.PERSONALEMAIL, 
-        req.body.name, 
-        req.body.email, 
-        req.body.message)
-    console.log(req.body.message);
-    res.json({
-        status: "success",
-        message: "Email sent successfully"});
+        await emailSchema.validate(req.body);
+        sendEmail(process.env.SERVEREMAIL,
+            process.env.PERSONALEMAIL,
+            req.body.name,
+            req.body.email,
+            req.body.message)
+        console.log(req.body.message);
+        res.json({
+            status: "success",
+            message: "Email sent successfully"
+        });
     } catch (error) {
         console.error(error);
         res.status(400).json({
