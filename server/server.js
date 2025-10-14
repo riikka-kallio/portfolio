@@ -43,15 +43,19 @@ function sendEmail(fromEmail, toEmail, name, emailAddress, message) {
 
 
 
-app.use(cors({
-    origin: ['http://localhost:5173', 'https://riikka.io'],
-    methods: ['GET', 'POST', 'OPTIONS'],
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
-// Handle OPTIONS preflight requests
-app.options('*', cors());
+// Enable CORS for all routes
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    
+    // Handle preflight
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+    next();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
