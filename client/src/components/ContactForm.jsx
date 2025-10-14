@@ -20,7 +20,7 @@ function ContactForm() {
 
     e.preventDefault();
     try {
-      let res = await fetch("http://127.0.0.1:4001/contact_form", {
+      let res = await fetch("http://portfolio-neon-two-26.vercel.app/contact_form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
