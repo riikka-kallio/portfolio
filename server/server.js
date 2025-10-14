@@ -44,7 +44,9 @@ function sendEmail(fromEmail, toEmail, name, emailAddress, message) {
 
 
 app.use(cors({
-    origin: '*',
+    origin: ['http://localhost:5173', 'https://riikka.io'],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
