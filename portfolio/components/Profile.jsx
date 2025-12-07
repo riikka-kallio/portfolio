@@ -11,9 +11,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export default function Profile() {
     return (
         <Box id="Profile" className="profile-container" sx={{ textAlign: 'center', py: 6 }}>
-            <Typography variant="h2" component="h1" gutterBottom>
-                Junior Software Developer
-            </Typography>
 
             <Box sx={{ width: 200, height: 200, mx: 'auto', borderRadius: '50%', overflow: 'hidden' }}>
                 <Image

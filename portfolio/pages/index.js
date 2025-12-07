@@ -9,12 +9,6 @@ import Skills from "../components/Skills";
 import ContactForm from "../components/ContactForm";
 import About from "../components/About";
 
-console.log("Profile type:", typeof Profile, Profile);
-console.log("About type:", typeof About, About);
-console.log("Projects type:", typeof Projects, Projects);
-console.log("Skills type:", typeof Skills, Skills);
-console.log("ContactForm type:", typeof ContactForm, ContactForm);
-
 export default function Home() {
   return (
     <>
@@ -33,19 +27,19 @@ export default function Home() {
         <meta property="og:url" content="https://riikka.io" />
 
         {/* Favicon */}
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/images/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/images/favicon-128.png" sizes="128x128" />
         <meta name="application-name" content="&nbsp;" />
         <meta name="msapplication-TileColor" content="#FFFFFF" />
         <meta name="msapplication-TileImage" content="mstile-144x144.png" />
@@ -56,11 +50,11 @@ export default function Home() {
       </Head>
 
       <Box id="Home">
-        {typeof Profile === "function" ? <Profile /> : <div style={{ color: 'red' }}>Profile not implemented yet</div>}
-        {typeof About === "function" ? <About /> : <div style={{ color: 'red' }}>About not implemented yet</div>}
-        {typeof Projects === "function" ? <Projects /> : <div style={{ color: 'red' }}>Projects not implemented yet</div>}
-        {typeof Skills === "function" ? <Skills /> : <div style={{ color: 'red' }}>Skills not implemented yet</div>}
-        {typeof ContactForm === "function" ? <ContactForm /> : <div style={{ color: 'red' }}>ContactForm not implemented yet</div>}
+        <About />
+        <Profile />
+        <Projects />
+        <Skills />
+        <ContactForm />
       </Box>
     </>
   );

@@ -1,14 +1,18 @@
-// Copyright 2025 riikkakallio
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     https://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+import { Box } from "@mui/material";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
+export default function About() {
+  return (
+   
+    <Container id="About Me">
+      <Typography variant="h2" component="h1" gutterBottom>
+        Junior Software Developer
+      </Typography>
+   
+      <Typography className="about-description">
+        Hello! &#128075; My name is Riikka and&nbsp;I&apos;m&nbsp;a Junior Software developer.&nbsp;I&apos;m&nbsp;passionate about accessibility and building user-friendly and responsive applications.&nbsp;I&apos;m&nbsp;proficient in CSS, HTML, JavaScript and React.&nbsp;I&apos;m&nbsp;currently working as a Technical Support and looking to change careers in becoming a Web Developer/Software Developer.
+      </Typography>
+    </Container>
+  )
+}

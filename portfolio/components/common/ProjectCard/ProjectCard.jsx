@@ -1,14 +1,64 @@
-// Copyright 2025 riikkakallio
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     https://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// import React from 'react';
+import PropTypes from 'prop-types';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Image from 'next/image';
+import CardActionArea from '@mui/material/CardActionArea';
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Link from '@mui/material/Link';
+import IconButton from '@mui/material/IconButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkIcon from '@mui/icons-material/Link';
 
+function ProjectCard({ project }) {
+    return (
+        <Card className="project-card">
+            <CardActionArea component="div">
+                <Box className="project-media">
+                    <Image
+                        src={project.image}
+                        alt={project.alt}
+                        width={600}
+                        height={360}
+                        className="project-image"
+                        priority={false}
+                    />
+                </Box>
+                <Box className="project-box">
+                    <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <IconButton>
+                            <GitHubIcon className="project-icon" />
+                        </IconButton>
+                    </Link>
+                    <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        <IconButton>
+                            <LinkIcon className="project-icon" />
+                        </IconButton>
+                    </Link>
+                </Box>
+                <CardContent>
+                    <Typography variant="h5" component="div" className="project-title">
+                        {project.title}
+                    </Typography>
+                    <Typography className="project-description">
+                        {project.description}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    );
+}
+
+ProjectCard.propTypes = {
+    project: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+        githubLink: PropTypes.string.isRequired,
+        liveLink: PropTypes.string.isRequired,
+    }).isRequired,
+};
+
+export default ProjectCard;
