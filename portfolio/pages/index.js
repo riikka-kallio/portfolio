@@ -9,6 +9,12 @@ import Skills from "../components/Skills";
 import ContactForm from "../components/ContactForm";
 import About from "../components/About";
 
+console.log("Profile type:", typeof Profile, Profile);
+console.log("About type:", typeof About, About);
+console.log("Projects type:", typeof Projects, Projects);
+console.log("Skills type:", typeof Skills, Skills);
+console.log("ContactForm type:", typeof ContactForm, ContactForm);
+
 export default function Home() {
   return (
     <>
@@ -50,11 +56,11 @@ export default function Home() {
       </Head>
 
       <Box id="Home">
-        <Profile />
-        <About />
-        <Projects />
-        <Skills />
-        <ContactForm />
+        {typeof Profile === "function" ? <Profile /> : <div style={{ color: 'red' }}>Profile not implemented yet</div>}
+        {typeof About === "function" ? <About /> : <div style={{ color: 'red' }}>About not implemented yet</div>}
+        {typeof Projects === "function" ? <Projects /> : <div style={{ color: 'red' }}>Projects not implemented yet</div>}
+        {typeof Skills === "function" ? <Skills /> : <div style={{ color: 'red' }}>Skills not implemented yet</div>}
+        {typeof ContactForm === "function" ? <ContactForm /> : <div style={{ color: 'red' }}>ContactForm not implemented yet</div>}
       </Box>
     </>
   );

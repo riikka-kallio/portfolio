@@ -1,14 +1,21 @@
-// Copyright 2025 riikkakallio
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     https://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+import React from "react";
+import Link from "next/link";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
+export default function Header() {
+  return (
+    <AppBar position="static" color="transparent" elevation={0}>
+      <Toolbar>
+        <Box sx={{ flexGrow: 1 }}>
+          <Link href="/" passHref>
+              <Typography variant="h6" component="span">Riikka</Typography>
+          </Link>
+        </Box>
+        {/* add nav links / icons here */}
+      </Toolbar>
+    </AppBar>
+  );
+}

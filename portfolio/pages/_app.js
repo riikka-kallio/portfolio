@@ -1,26 +1,18 @@
-// import { useState } from 'react'
 import "@/styles/globals.css";
-import Home from '@/pages/index.js';
-// import Layout from "@/components/Layout";
+import "@/styles/style.css";
 import { StyledEngineProvider } from '@mui/material/styles';
-import "@/styles/style.css"
-import { CssBaseline } from "@mui/material";
-// import "./styles/fonts.css";
-
+import CssBaseline from "@mui/material/CssBaseline";
+import Layout from "@/components/Layout";
+// console.log('Layout import type:', typeof Layout, Layout);
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-     <CssBaseline>
-          <StyledEngineProvider injectFirst>
-              <Routes>
-                <Route path="/" element={<Layout/>}>
-                  <Route index element={<Home />}/>
-                </Route>
-              </Routes>
-          </StyledEngineProvider>
-     </CssBaseline>
-    </>
+    <StyledEngineProvider injectFirst>
+      <CssBaseline />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </StyledEngineProvider>
   );
 }
 

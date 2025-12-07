@@ -1,24 +1,22 @@
+'use client'
+
+// ...existing imports...
 import React from "react";
-import Container from "@mui/material/Container";
 import Header from "./Header";
 import Footer from "./Footer";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
-function Layout() {
+export default function Layout({ children }) {
     return (
         <>
-            <header>
-                <Header/>
-            </header>
-            <main>
+            <Header />
+            <Box component="main" sx={{ minHeight: "calc(100vh - 160px)", py: 4 }}>
                 <Container>
-                    <Outlet/>
+                    {children}
                 </Container>
-            </main>
-            <footer>
-                <Footer/>
-            </footer>
+            </Box>
+            <Footer />
         </>
     );
 }
-
-export default Layout;
