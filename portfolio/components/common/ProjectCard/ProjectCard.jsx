@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -30,15 +30,17 @@ function ProjectCard({ project }) {
                         <IconButton>
                             <GitHubIcon className="project-icon" />
                         </IconButton>
+                        <span className="sr-only"> (opens in a new tab)</span>
                     </Link>
                     <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
                         <IconButton>
                             <LinkIcon className="project-icon" />
                         </IconButton>
+                        <span className="sr-only"> (opens in a new tab)</span>
                     </Link>
                 </Box>
                 <CardContent>
-                    <Typography variant="h5" component="div" className="project-title">
+                    <Typography variant="h3" component="div" className="project-title">
                         {project.title}
                     </Typography>
                     <Typography className="project-description">

@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -48,12 +48,12 @@ function Projects() {
             liveLink: "https://christmas-game-hackathon-2024.netlify.app/",
         },
         {
-            title: "Serverless Book App",
-            description: "This app uses serverless functions made with React and Next.js",
-            image: "/images/booksapp.jpeg",
-            alt: "book app image",
-            githubLink: "https://github.com/riikka-kallio/c18-next-books",
-            liveLink: "https://c18-next-books.vercel.app/",
+            title: "Portfolio Website",
+            description: "This is my personal portfolio website made with React, Next.js and Node.js",
+            image: "/images/portfolio.png",
+            alt: "portfolio website image",
+            githubLink: "https://github.com/riikka-kallio/portfolio",
+            liveLink: "https://riikka.io/",
         },
     ];
 

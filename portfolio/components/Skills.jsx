@@ -29,7 +29,7 @@ function Skills() {
     return (
         <Container id="Skills" className="general-container">
             <Typography variant="h2">
-                SKILLS
+                Skills
             </Typography>
             <Grid container className="skill-grid">
                 <SkillAvatar title="CSS" alt="css icon" src={cssIcon} />

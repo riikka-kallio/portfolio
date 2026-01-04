@@ -1,12 +1,32 @@
+import { useState } from "react";
 import PropTypes from 'prop-types';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 function SkillAvatar({title, alt, src}) {
+    const [open, setOpen] = useState(false);
+
     return (
-        <Tooltip title={title} arrow>
-            <Avatar alt={alt} src={src} className="avatar-icon" />
+        <ClickAwayListener onClickAway={() => setOpen(false)}>
+        <Tooltip
+            title={title}
+            arrow
+            open={open}
+            disableHoverListener
+            disableFocusListener
+            disableTouchListener
+            >
+            <Avatar
+                alt={alt}
+                src={src}
+                sx={{ cursor: "pointer" }}
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+                onClick={() => setOpen((prev) => !prev)}
+                className="avatar-icon" />
         </Tooltip>
+        </ClickAwayListener>
     );
 }
 

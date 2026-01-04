@@ -27,7 +27,7 @@
     --semi-bold: 600;
 
     --body-font-size: 1.1rem;
-    --h1-font-size: 5rem;
+    --h1-font-size: 5.5rem;
     --h2-font-size: 4rem;
 
     margin: 0;
@@ -78,10 +78,10 @@ body {
 h1 {
     color: var(--white);
     text-shadow: 0.05em 0.1em 0.05em var(--very-dark-gray);
-    font-size: var(--h1-font-size);
-    font-family: var(--heading-font-family);
+    font-size: var(--h1-font-size) !important;
+    font-family: var(--heading-font-family) !important;
     text-align: center;
-    margin: 1em 0 1em 0;
+    margin: 0.5em 0 0.5em 0 !important;
 
 }
 
@@ -89,10 +89,9 @@ h2 {
     color: var(--white);
     text-shadow: 0.02em 0.01em 0.05em hsl(0 0% 9%);
     text-align: center;
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-    font-family: var(--heading-font-family);
-    font-size: var(--h2-font-size);
+    margin: 0.5em 0 1em 0 !important;
+    font-family: var(--heading-font-family) !important;
+    font-size: var(--h2-font-size) !important;
 
 }
 
@@ -200,8 +199,8 @@ h2 {
 }
 
 .project-card {
-    width: 300px;
-    height: 600px;
+    width: 350px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -243,8 +242,7 @@ h2 {
 
 .project-title {
     color: var(--very-dark-gray);
-    font-size: 2em;
-    font-weight: var(--semi-bold);
+    font-size: 1.7em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
