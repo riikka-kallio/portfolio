@@ -1,9 +1,6 @@
 import React from "react";
 import Head from "next/head";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import styles from "@/styles/Home.module.css"; NOT SURE IF NEEDED
 import { Box } from "@mui/material";
-import Profile from "../components/Profile";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import ContactForm from "../components/ContactForm";
@@ -51,7 +48,6 @@ export default function Home() {
 
       <Box id="Home">
         <About />
-        <Profile />
         <Projects />
         <Skills />
         <ContactForm />

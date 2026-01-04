@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
-
-// import Navigation from './Navigation';
 import ResponsiveAppBar from './ResponsiveAppBar';
 
 function Header() {
@@ -18,7 +16,6 @@ function Header() {
     return (
         <Box sx={{ display: "flex" }}>
             <ResponsiveAppBar handleDrawerToggle={handleDrawerToggle} />
-            {/* <Navigation isOpen={isOpen} handleDrawerToggle={handleDrawerToggle} /> */}
         </Box>
     )
 }
