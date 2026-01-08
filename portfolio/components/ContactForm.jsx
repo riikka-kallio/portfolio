@@ -19,33 +19,31 @@ function ContactForm() {
 
         e.preventDefault();
         try {
-            let res = await fetch("http://portfolio-neon-two-26.vercel.app/contact_form", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+            // Use the Next.js API route (same origin) instead of an absolute localhost URL
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     name: fullName,
                     email: email,
                     message: message,
                 }),
             });
-            let data = await res.json();
+
+            const data = await res.json();
             console.log(data);
 
-            if (data.status === "success") {
-                alert(
-                    "I have received your message. I will reach out to you as soon as possible."
-                );
-                setFullName("");
-                setEmail("");
-                // setSubject("");
-                setMessage("");
+            if (res.ok && data.status === 'success') {
+                alert('I have received your message. I will reach out to you as soon as possible.');
+                setFullName('');
+                setEmail('');
+                setMessage('');
             } else {
-                alert("Oops. Something went wrong. Please try again.");
+                alert('Oops. Something went wrong. Please try again.');
             }
         } catch (error) {
             console.log(error);
+            alert('Network error. Please try again later.');
         }
     };
 
