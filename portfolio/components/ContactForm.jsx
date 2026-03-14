@@ -14,6 +14,7 @@ function ContactForm() {
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [sent, setSent] = useState(false);
 
     const handleSubmit = async (e) => {
 
@@ -38,6 +39,8 @@ function ContactForm() {
                 setFullName('');
                 setEmail('');
                 setMessage('');
+                setSent(true);
+                setTimeout(() => setSent(false), 3000);
             } else {
                 alert('Oops. Something went wrong. Please try again.');
             }
@@ -96,8 +99,9 @@ function ContactForm() {
                     type="submit"
                     variant="contained"
                     className="contact-form-button"
-                    fullWidth>
-                    Submit</Button>
+                    fullWidth
+                    disabled={sent}>
+                    {sent ? 'Sent' : 'Submit'}</Button>
             </Box>
         </Container>
     )
