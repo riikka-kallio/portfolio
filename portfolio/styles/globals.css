@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 :root {
     --black: hsl(0 0% 0%);
     --white: hsl(0 0% 100%);
 
-    --light-blue: hsl(193 70% 76.3%);
-    --light-pink: hsl(342 86.5% 77%);
-    --light-green: hsl(127 70% 85%);
-    --light-purple: hsl(279 86.5% 77%);
+    --light-blue: hsl(194, 60%, 78%);
+    --light-pink: hsl(341, 66%, 83%);
+    --light-green: hsl(128, 56%, 89%);
+    --light-purple: hsl(279, 65%, 84%);
 
     --very-dark-gray: hsl(0 0% 9%);
     --medium-gray: hsl(0 0% 25%);
@@ -17,9 +19,9 @@
     --dark-blue-purple: hsl(248 70% 40%);
     --very-light-green: hsl(127 70% 95%);
 
-    --font-family: "Oswald";
+    --font-family: "Quicksand";
 
-    --heading-font-family: "Bangers", "Oswald", sans-serif;
+    --heading-font-family: "Quicksand", sans-serif;
 
     --extra-light: 200;
     --light: 300;
@@ -37,7 +39,7 @@
 }
 
 * {
-  font-family: var(--font-family), Arial, sans-serif;
+    font-family: var(--font-family), Arial, sans-serif;
 }
 
 body {
@@ -76,21 +78,23 @@ body {
 
 
 h1 {
-    color: var(--white);
-    text-shadow: 0.05em 0.1em 0.05em var(--very-dark-gray);
+    color: hsl(269, 69%, 16%);
+    /* text-shadow: 0.05em 0.1em 0.05em var(--very-dark-gray); */
     font-size: var(--h1-font-size) !important;
     font-family: var(--heading-font-family) !important;
+    font-weight: 400 !important;
     text-align: center;
     margin: 0.5em 0 0.5em 0 !important;
 
 }
 
 h2 {
-    color: var(--white);
-    text-shadow: 0.02em 0.01em 0.05em hsl(0 0% 9%);
+    color: hsl(269, 69%, 16%);
+    /* text-shadow: 0.02em 0.01em 0.05em hsl(0 0% 9%); */
     text-align: center;
     margin: 0.5em 0 1em 0 !important;
     font-family: var(--heading-font-family) !important;
+    font-weight: 400 !important;
     font-size: var(--h2-font-size) !important;
 
 }
@@ -145,11 +149,15 @@ h2 {
 }
 
 .profile-container {
-    margin: 5em;
+    margin: 5em auto;
     padding: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.profile-box {
+.icon-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 5em;
@@ -290,7 +298,7 @@ h2 {
 }
 
 .Mui-focused {
-      color: var(--very-dark-gray);
+    color: var(--very-dark-gray);
 }
 
 .Mui-focused:after {
@@ -298,14 +306,14 @@ h2 {
 }
 
 .MuiFilledInput-root:after {
-  border-bottom: 2px solid hsl(248, 70%, 40%);
+    border-bottom: 2px solid hsl(248, 70%, 40%);
 }
 
 .contact-form-container .MuiInputLabel-root.Mui-focused {
-  color: hsl(248, 70%, 40%);
+    color: hsl(248, 70%, 40%);
 }
 
-.contact-form-button{
+.contact-form-button {
     background-color: var(--medium-purple);
 }
 
@@ -325,27 +333,36 @@ h2 {
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 @media (min-width: 300px) and (max-width: 640px) {
     h1 {
-        margin: 1em -1em 1em -1em;
+        margin: 1em -1em 1em -1em !important;
+        font-size: 4em !important;
     }
 
-    /* .profile-image-wrapper {
-        display: none !important;
-    } */
+    .profile-container {
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em;
+        width: 90%;
+    }
 
     .profile-image {
+        display: none;
+    }
+
+    .profile-image-wrapper {
         display: none;
     }
 
@@ -358,8 +375,22 @@ h2 {
         gap: 15px;
     }
 
+    .icon-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     .about-description {
-        font-size: 1.2em;
+        margin: 1em -1em 1em -1em !important;
+        font-size: 1em;
+    }
+
+    .general-container {
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em;
+        width: 90%;
     }
 
     .medium-navigation-bar-header {

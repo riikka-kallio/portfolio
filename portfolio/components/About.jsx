@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link'
+import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -11,7 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export default function About() {
   return (
 
-    <Box id="About Me" className="profile-container">
+    <Container id="About Me" className="profile-container">
       <Typography component="h1" variant="h1" gutterBottom>
         Junior Software Developer
       </Typography>
@@ -29,8 +30,9 @@ export default function About() {
           height={400}
           priority
         />
+      </Box>
 
-      <Box className="profile-box">
+      <Box className="icon-wrapper">
         <Link href="https://github.com/riikka-kallio" target="_blank" rel="noopener noreferrer">
           <IconButton aria-label="github account of riikka kallio">
             <GitHubIcon className="profile-icon" />
@@ -50,7 +52,6 @@ export default function About() {
           <span className="sr-only"> (opens in a new tab)</span>
         </Link>
       </Box>
-    </Box>
-    </Box>
+    </Container>
   )
 }
