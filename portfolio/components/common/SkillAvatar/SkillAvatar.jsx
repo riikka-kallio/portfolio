@@ -3,34 +3,62 @@ import PropTypes from 'prop-types';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import { useMediaQuery } from '@mui/material';
 
 function SkillAvatar({ title, alt, src }) {
     const [open, setOpen] = useState(false);
-    const [isMobileState, setIsMobileState] = useState(false);
-    const isMobile = useMediaQuery('(max-width: 640px)');
+    const [isMobile, setIsMobile] = useState(true);
 
     useEffect(() => {
-        setIsMobileState(isMobile);
-    }, [isMobile]);
+        // Only run on client side
+        if (typeof window === 'undefined') return;
 
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 640);
+        };
+
+        checkMobile();
+        
+        const timer = setTimeout(() => {
+            window.addEventListener('resize', checkMobile);
+        }, 0);
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', checkMobile);
+        };
+    }, []);
+
+    // On mobile, show tooltip always
+    if (isMobile) {
+        return (
+            <Tooltip title={title} arrow>
+                <Avatar
+                    alt={alt}
+                    src={src}
+                    sx={{ cursor: "pointer" }}
+                    className="avatar-icon" />
+            </Tooltip>
+        );
+    }
+
+    // On desktop, use interactive tooltip
     return (
-        <ClickAwayListener onClickAway={() => !isMobileState && setOpen(false)}>
+        <ClickAwayListener onClickAway={() => setOpen(false)}>
             <Tooltip
                 title={title}
                 arrow
-                open={isMobileState || open}
-                disableHoverListener={isMobileState}
-                disableFocusListener={isMobileState}
-                disableTouchListener={isMobileState}
+                open={open}
+                disableHoverListener={false}
+                disableFocusListener={true}
+                disableTouchListener={true}
             >
                 <Avatar
                     alt={alt}
                     src={src}
                     sx={{ cursor: "pointer" }}
-                    onMouseEnter={() => !isMobileState && setOpen(true)}
-                    onMouseLeave={() => !isMobileState && setOpen(false)}
-                    onClick={() => !isMobileState && setOpen((prev) => !prev)}
+                    onMouseEnter={() => setOpen(true)}
+                    onMouseLeave={() => setOpen(false)}
+                    onClick={() => setOpen((prev) => !prev)}
                     className="avatar-icon" />
             </Tooltip>
         </ClickAwayListener>
