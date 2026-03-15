@@ -33,7 +33,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#menu"
             className="medium-navigation-bar-header"
           >
             Riikka Kallio
@@ -79,7 +79,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#menu"
             className="small-navigation-bar-header"
           >
             Riikka Kallio
