@@ -7,25 +7,30 @@ import { useMediaQuery } from '@mui/material';
 
 function SkillAvatar({ title, alt, src }) {
     const [open, setOpen] = useState(false);
+    const [isMobileState, setIsMobileState] = useState(false);
     const isMobile = useMediaQuery('(max-width: 640px)');
 
+    useEffect(() => {
+        setIsMobileState(isMobile);
+    }, [isMobile]);
+
     return (
-        <ClickAwayListener onClickAway={() => !isMobile && setOpen(false)}>
+        <ClickAwayListener onClickAway={() => !isMobileState && setOpen(false)}>
             <Tooltip
                 title={title}
                 arrow
-                open={isMobile || open}
-                disableHoverListener={isMobile}
-                disableFocusListener={isMobile}
-                disableTouchListener={isMobile}
+                open={isMobileState || open}
+                disableHoverListener={isMobileState}
+                disableFocusListener={isMobileState}
+                disableTouchListener={isMobileState}
             >
                 <Avatar
                     alt={alt}
                     src={src}
                     sx={{ cursor: "pointer" }}
-                    onMouseEnter={() => !isMobile && setOpen(true)}
-                    onMouseLeave={() => !isMobile && setOpen(false)}
-                    onClick={() => !isMobile && setOpen((prev) => !prev)}
+                    onMouseEnter={() => !isMobileState && setOpen(true)}
+                    onMouseLeave={() => !isMobileState && setOpen(false)}
+                    onClick={() => !isMobileState && setOpen((prev) => !prev)}
                     className="avatar-icon" />
             </Tooltip>
         </ClickAwayListener>

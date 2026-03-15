@@ -13,13 +13,29 @@ export default function About() {
   return (
 
     <Container id="About Me" className="profile-container">
-      <Typography component="h1" variant="h1" gutterBottom>
-        Junior Software Developer
-      </Typography>
-
-      <Typography className="about-description">
-        Hello! &#128075; My name is Riikka and&nbsp;I&apos;m&nbsp;a Junior Software developer.&nbsp;I&apos;m&nbsp;passionate about accessibility and building user-friendly and responsive applications.&nbsp;I&apos;m&nbsp;proficient in CSS, HTML, JavaScript and React.&nbsp;I&apos;m&nbsp;currently working as a Product Specialist and looking to change careers in becoming a Web Developer/Software Developer.
-      </Typography>
+        <Typography component="h1" variant="h1" gutterBottom>
+          Junior Software Developer
+        </Typography>
+      <Box className="about-box">
+        <Typography className="about-description">
+          Hello! 👋 My name is Riikka and I'm a Junior Software developer.
+        </Typography>
+  
+        <Typography className="about-description">
+          With a degree in Biomedical Science and a professional background as Product Specialist, I've always been passionate about helping people navigate complex systems.
+          While I'm currently working as a Product Specialist, I'm now moving into software development full-time.
+        </Typography>
+  
+        <Typography className="about-description">
+          I've always been drawn to how things work, whether it's in a lab or in a codebase.
+          These days I'm focused on building clean, responsive applications using React, JavaScript, HTML, and CSS.
+        </Typography>
+  
+        <Typography className="about-description">
+          Because of my science background, I'm naturally detail-oriented and care about accessibility making sure the tools I build actually work for everyone.
+          I'm excited to bring my analytical mindset to a new team and start my career as a Software Developer.
+        </Typography>
+      </Box>
 
       <Box className="profile-image-wrapper">
         <Image

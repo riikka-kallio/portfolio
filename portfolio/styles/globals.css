@@ -44,6 +44,7 @@
 
 body {
     font-family: var(--font-family), Arial, sans-serif;
+    font-size: var(--body-font-size);
     background-image: linear-gradient(135deg,
             var(--light-blue),
             var(--light-pink),
@@ -79,7 +80,6 @@ body {
 
 h1 {
     color: hsl(269, 69%, 16%);
-    /* text-shadow: 0.05em 0.1em 0.05em var(--very-dark-gray); */
     font-size: var(--h1-font-size) !important;
     font-family: var(--heading-font-family) !important;
     font-weight: 400 !important;
@@ -90,7 +90,6 @@ h1 {
 
 h2 {
     color: hsl(269, 69%, 16%);
-    /* text-shadow: 0.02em 0.01em 0.05em hsl(0 0% 9%); */
     text-align: center;
     margin: 0.5em 0 1em 0 !important;
     font-family: var(--heading-font-family) !important;
@@ -179,11 +178,14 @@ h2 {
     font-size: 2em;
 }
 
+.about-box {
+    margin-bottom: 5em;
+}
+
 .about-description {
     color: var(--very-dark-gray);
     font-size: 1.5em;
     margin-top: 2em;
-    padding: 2em 0 2em 0;
     text-align: center;
 }
 
@@ -211,7 +213,7 @@ h2 {
 
 .project-card {
     width: 350px;
-    height: 650px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -345,9 +347,28 @@ h2 {
 }
 
 @media (min-width: 300px) and (max-width: 640px) {
+    body {
+        font-size: 0.8em !important;
+    }
+
     h1 {
-        margin: 1em -1em 1em -1em !important;
+        margin: 1em -1em 0 -1em !important;
+        font-size: 5em !important;
+    }
+
+    h2 {
         font-size: 4em !important;
+    }
+
+    .about-box {
+        margin: 3em;
+    }
+
+    .about-description {
+        color: var(--very-dark-gray);
+        font-size: 1.5em;
+        margin-top: 2em;
+        text-align: center;
     }
 
     .profile-container {
@@ -369,10 +390,7 @@ h2 {
     .project-card {
         width: 90%;
         height: auto;
-    }
-
-    .project-grid {
-        gap: 15px;
+        margin: 0 auto;
     }
 
     .icon-wrapper {
@@ -380,9 +398,10 @@ h2 {
         justify-content: center;
     }
 
-    .about-description {
-        margin: 1em -1em 1em -1em !important;
-        font-size: 1em;
+    .project-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .general-container {
