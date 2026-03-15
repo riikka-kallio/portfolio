@@ -17,7 +17,7 @@ function SkillAvatar({ title, alt, src }) {
         };
 
         checkMobile();
-        
+
         const timer = setTimeout(() => {
             window.addEventListener('resize', checkMobile);
         }, 0);
