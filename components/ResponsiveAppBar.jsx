@@ -1,104 +1,36 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import { useState } from 'react';
 
-const pages = ['Home', 'About Me', 'Projects', 'Skills', 'Contact Form'];
+const navLinks = [
+  { label: 'HOME', href: '#home' },
+  { label: 'ABOUT ME', href: '#home' },
+  { label: 'PROJECTS', href: '#projects' },
+  { label: 'SKILLS', href: '#skills' },
+  { label: 'CONTACT FORM', href: '#contact' },
+];
 
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-
+export default function ResponsiveAppBar() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <AppBar component='nav' className="navigation-bar">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#menu"
-            className="medium-navigation-bar-header"
-          >
-            Riikka Kallio
-          </Typography>
-
-          <Box className="small-navigation-menu-box">
-            <IconButton
-              className="menu-icon-button"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              className="small-navigation-bar-menu"
-            >
-              {pages.map((page) => (
-                <MenuItem key={page}
-                  onClick={handleCloseNavMenu}
-                  component="a"
-                  href={"#" + page}>
-                  <Typography>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#menu"
-            className="small-navigation-bar-header"
-          >
-            Riikka Kallio
-          </Typography>
-          <Box className="medium-navigation-menu-box">
-            {pages.map((page) => (
-              <Button
-                key={page}
-                href={"#" + page}
-                onClick={() => handleCloseNavMenu(page)}
-                className="medium-navigation-menu-button"
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <nav className="nav">
+      <a href="#home" className="nav-logo">RIIKKA KALLIO</a>
+      <button
+        className="nav-hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded={open}
+        onClick={() => setOpen(o => !o)}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+      <ul className={`nav-links${open ? ' open' : ''}`}>
+        {navLinks.map(link => (
+          <li key={link.label}>
+            <a href={link.href} onClick={() => setOpen(false)}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
-export default ResponsiveAppBar;

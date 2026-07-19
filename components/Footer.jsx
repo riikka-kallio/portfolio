@@ -1,13 +1,7 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ py: 3, textAlign: "center" }}>
-      <Typography variant="body2" color="textSecondary">
-        © {new Date().getFullYear()} Riikka Kallio
-      </Typography>
-    </Box>
+    <footer className="footer-box">
+      <p className="copy-right">© {new Date().getFullYear()} Riikka Kallio</p>
+    </footer>
   );
 }

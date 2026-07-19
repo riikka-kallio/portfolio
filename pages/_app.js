@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 
 const theme = createTheme({
   typography: {
-    fontFamily: '"Quicksand", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
   },
 });
 
