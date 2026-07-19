@@ -19,7 +19,17 @@ export default async function handler(req, res) {
   try {
     await emailSchema.validate(req.body);
 
-    const { name, email, message } = req.body;
+    const { name, email, message, honeypot, loadedAt } = req.body;
+
+    // Honeypot: bots fill hidden fields, real users never see them
+    if (honeypot) {
+      return res.status(200).json({ status: 'success' });
+    }
+
+    // Time-trap: bots submit instantly, real users take at least a few seconds
+    if (!loadedAt || Date.now() - loadedAt < 3000) {
+      return res.status(200).json({ status: 'success' });
+    }
 
     const data = new FormData();
     data.append('from', `<${process.env.SERVEREMAIL}>`);

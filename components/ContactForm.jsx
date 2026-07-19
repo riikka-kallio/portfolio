@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -15,6 +15,8 @@ function ContactForm() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [sent, setSent] = useState(false);
+    const [honeypot, setHoneypot] = useState("");
+    const loadedAtRef = useRef(Date.now());
 
     const handleSubmit = async (e) => {
 
@@ -28,6 +30,8 @@ function ContactForm() {
                     name: fullName,
                     email: email,
                     message: message,
+                    honeypot: honeypot,
+                    loadedAt: loadedAtRef.current,
                 }),
             });
 
@@ -94,6 +98,20 @@ function ContactForm() {
                         rows={5}
                     />
                 </FormControl>
+
+                {/* Honeypot: hidden from real users, filled by bots */}
+                <div style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }} aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input
+                        id="website"
+                        name="website"
+                        type="text"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                        tabIndex={-1}
+                        autoComplete="off"
+                    />
+                </div>
 
                 <Button
                     type="submit"
