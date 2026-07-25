@@ -1,9 +1,9 @@
 :root {
   --dark-sage: oklch(32% 0.05 145);
-  --hero-bg: #33473c;
+  --hero-bg: oklch(37.729% 0.03145 160.429);
   --light-sage: oklch(88% 0.04 145);
   --section-bg: oklch(94% 0.02 145);
-  --terracotta: #d98a6b;
+  --terracotta: oklch(70.798% 0.10649 42.079);
   --nav-bg: oklch(98% 0.008 130);
   --near-white: oklch(99% 0.005 130);
   --body-on-dark: oklch(92% 0.01 130);
@@ -34,7 +34,7 @@ body {
   justify-content: space-between;
   padding: 20px 48px;
   background: var(--nav-bg);
-  border-bottom: 1px solid oklch(88% 0.02 130);
+  /* border-bottom: 1px solid oklch(88% 0.02 130); */
 }
 
 .nav-logo {
@@ -97,11 +97,11 @@ body {
 }
 
 .hero-photo-wrapper {
-  width: 260px;
-  height: 260px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   overflow: hidden;
-  border: 6px solid var(--light-sage);
+  /* border: 6px solid var(--light-sage); */
   box-shadow: 0 12px 28px oklch(30% 0.03 145 / 0.18);
   flex-shrink: 0;
 }
