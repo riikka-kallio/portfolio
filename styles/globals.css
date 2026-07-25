@@ -128,12 +128,13 @@ body {
 }
 
 .hero-right h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cardo', serif;
   font-size: 48px;
   font-weight: 600;
   line-height: 1.15;
   margin: 0 0 24px;
   color: oklch(98% 0.01 130);
+  text-transform: uppercase;
 }
 
 .hero-right p {
@@ -154,7 +155,8 @@ body {
 }
 
 .projects-section h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cardo', serif;
+  text-transform: uppercase;
   font-size: 40px;
   font-weight: 600;
   color: var(--dark-sage);
@@ -211,7 +213,8 @@ body {
 }
 
 .project-card-body h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cardo', serif;
+  text-transform: uppercase;
   font-size: 21px;
   font-weight: 600;
   margin: 0 0 12px;
@@ -233,7 +236,8 @@ body {
 }
 
 .skills-section h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cardo', serif;
+  text-transform: uppercase;
   font-size: 36px;
   font-weight: 600;
   color: var(--dark-sage);
@@ -270,7 +274,8 @@ body {
 }
 
 .contact-inner h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cardo', serif;
+  text-transform: uppercase;
   font-size: 36px;
   font-weight: 600;
   color: var(--dark-sage);
