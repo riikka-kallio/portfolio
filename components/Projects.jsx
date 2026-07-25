@@ -1,8 +1,5 @@
 import ProjectCard from "./common/ProjectCard/ProjectCard";
 
-const ACCENT_SAGE = '#b9c9ab';
-const ACCENT_TERRACOTTA = '#d98a6b';
-
 const projects = [
   {
     title: "Portfolio Website",
@@ -63,7 +60,6 @@ export default function Projects() {
           <ProjectCard
             key={project.title}
             project={project}
-            accentColor={index % 2 === 0 ? ACCENT_SAGE : ACCENT_TERRACOTTA}
           />
         ))}
       </div>

@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 
-function ProjectCard({ project, accentColor }) {
+function ProjectCard({ project }) {
   return (
     <div className="project-card-new">
-      <div className="project-card-image-panel" style={{ background: accentColor }}>
+      <div className="project-card-image-panel">
         <Image
           src={project.image}
           alt={project.alt}
-          width={600}
-          height={220}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          fill
+          sizes="(max-width: 768px) 100vw, 520px"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="project-card-body">
@@ -42,7 +42,6 @@ ProjectCard.propTypes = {
     githubLink: PropTypes.string.isRequired,
     liveLink: PropTypes.string.isRequired,
   }).isRequired,
-  accentColor: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

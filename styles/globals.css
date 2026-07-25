@@ -75,6 +75,12 @@ body {
   line-height: 0;
 }
 
+/* ── Animations ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ── Hero / About ── */
 .hero-section {
   background: var(--hero-bg);
@@ -135,6 +141,8 @@ body {
   margin: 0 0 24px;
   color: oklch(98% 0.01 130);
   text-transform: uppercase;
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease forwards;
 }
 
 .hero-right p {
@@ -142,11 +150,19 @@ body {
   line-height: 1.7;
   color: var(--body-on-dark);
   margin: 0 0 20px;
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease forwards;
 }
 
 .hero-right p:last-child {
   margin-bottom: 0;
 }
+
+.hero-right h1                { animation-delay: 0s; }
+.hero-right p:nth-of-type(1)    { animation-delay: 0.6s; }
+.hero-right p:nth-of-type(2)    { animation-delay: 0.9s; }
+.hero-right p:nth-of-type(3)    { animation-delay: 1.2s; }
+.hero-right p:nth-of-type(4)    { animation-delay: 1.5s; }
 
 /* ── Projects ── */
 .projects-section {
@@ -181,8 +197,11 @@ body {
 }
 
 .project-card-image-panel {
-  height: 220px;
+  position: relative;
+  height: 300px;
   overflow: hidden;
+  margin: 16px 16px 0;
+  border-radius: 6px;
 }
 
 .project-card-image-panel img {
@@ -198,6 +217,7 @@ body {
 
 .project-card-icons {
   display: flex;
+  justify-content: center;
   gap: 14px;
   margin-bottom: 16px;
 }
