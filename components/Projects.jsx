@@ -60,6 +60,7 @@ export default function Projects() {
           <ProjectCard
             key={project.title}
             project={project}
+            priority={index < 2}
           />
         ))}
       </div>

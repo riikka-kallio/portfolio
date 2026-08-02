@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, priority = false }) {
   return (
     <div className="project-card-new">
       <div className="project-card-image-panel">
@@ -11,7 +11,8 @@ function ProjectCard({ project }) {
           src={project.image}
           alt={project.alt}
           fill
-          sizes="(max-width: 768px) 100vw, 520px"
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 450px"
           style={{ objectFit: 'cover' }}
         />
       </div>
@@ -42,6 +43,7 @@ ProjectCard.propTypes = {
     githubLink: PropTypes.string.isRequired,
     liveLink: PropTypes.string.isRequired,
   }).isRequired,
+  priority: PropTypes.bool,
 };
 
 export default ProjectCard;
