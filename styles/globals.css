@@ -214,6 +214,12 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 20px oklch(30% 0.03 145 / 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card-new:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 36px oklch(30% 0.03 145 / 0.18);
 }
 
 .project-card-image-panel {
@@ -229,6 +235,11 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card-new:hover .project-card-image-panel img {
+    transform: scale(1.07);
 }
 
 .project-card-body {
