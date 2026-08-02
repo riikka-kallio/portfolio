@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --dark-sage: oklch(32% 0.05 145);
     --hero-bg: oklch(37.729% 0.03145 160.429);
