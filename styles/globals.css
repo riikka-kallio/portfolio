@@ -311,6 +311,13 @@ body {
     font-size: 15px;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.skill-pill:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px oklch(30% 0.03 145 / 0.15);
 }
 
 /* ── Contact Form ── */
