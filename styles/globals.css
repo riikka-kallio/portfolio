@@ -24,7 +24,6 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background: var(--near-white);
 }
 
@@ -42,7 +41,7 @@ body {
 }
 
 .nav-logo {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-poppins), sans-serif;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 1px;
@@ -57,7 +56,7 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -144,7 +143,7 @@ body {
 }
 
 .hero-right h1 {
-    font-family: 'Cardo', serif;
+    font-family: var(--font-cardo), serif;
     font-size: 48px;
     font-weight: 600;
     line-height: 1.15;
@@ -195,7 +194,7 @@ body {
 }
 
 .projects-section h2 {
-    font-family: 'Cardo', serif;
+    font-family: var(--font-cardo), serif;
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 600;
@@ -268,7 +267,7 @@ body {
 }
 
 .project-card-body h3 {
-    font-family: 'Cardo', serif;
+    font-family: var(--font-cardo), serif;
     text-transform: uppercase;
     font-size: 21px;
     font-weight: 600;
@@ -291,7 +290,7 @@ body {
 }
 
 .skills-section h2 {
-    font-family: 'Cardo', serif;
+    font-family: var(--font-cardo), serif;
     text-transform: uppercase;
     font-size: 36px;
     font-weight: 600;
@@ -314,7 +313,7 @@ body {
     color: var(--dark-sage);
     font-size: 15px;
     font-weight: 500;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
 }
@@ -336,7 +335,7 @@ body {
 }
 
 .contact-inner h2 {
-    font-family: 'Cardo', serif;
+    font-family: var(--font-cardo), serif;
     text-transform: uppercase;
     font-size: 36px;
     font-weight: 600;
@@ -358,7 +357,7 @@ body {
     border: 1px solid oklch(80% 0.03 145);
     background: var(--near-white);
     font-size: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
     outline: none;
     width: 100%;
 }
@@ -381,7 +380,7 @@ body {
     color: oklch(98% 0.01 130);
     font-size: 15px;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
     cursor: pointer;
 }
 
@@ -405,7 +404,7 @@ body {
 .copy-right {
     font-size: 14px;
     color: var(--body-on-dark);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
 }
 
 /* ── Accessibility ── */
